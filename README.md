@@ -35,7 +35,7 @@
         .btn {
             width: 20%;
             color: white;
-            background-color: darkgreen;
+            background-color:linear-gradient (to right, #d16ba5, #86a8e7);
             border-radius: 10px;
             padding: 10px;
             font-size: 14px;
@@ -45,7 +45,7 @@
 
         .btn:hover {
             cursor: pointer;
-            background-color: darkgoldenrod;
+            background-color: black ;
         }
 
         .form-group {
