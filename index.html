@@ -2,133 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Styled Form</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        
-        .signup-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
-        }
-        
-        h1 {
-            text-align: center;
-            margin-bottom: 25px;
-            color: #333;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
         label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
+            color: darkgrey; 
+            font-size: 12pt;
         }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
+
+        input:hover {
+            color: lightgray;
+        }
+
+        input, select {
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid grey;
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
+            height: 25px;
         }
-        
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+
+        input[type="radio"] {
+            height: 15px;
+            width: 15px;
         }
-        
-        .checkbox-group input {
-            margin-right: 10px;
+
+        input:focus, select:focus {
+            border-bottom: 2px solid darkgreen;
+            outline: none;
         }
-        
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .signup-btn {
-            background-color: #4285f4;
+
+        .btn {
+            width: 20%;
             color: white;
+            background-color: darkgreen;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
             border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
+        }
+
+        .btn:hover {
             cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
+            background-color: darkgoldenrod;
         }
-        
-        .signin-link {
-            color: #4285f4;
-            text-decoration: none;
-            font-weight: bold;
+
+        .form-group {
+            margin-bottom: 15px;
         }
-        
-        .signin-link:hover {
-            text-decoration: underline;
+
+        .form-container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="signup-container">
-        <h1>Sign Up</h1>
-        
-        <form>
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" value="Zachary Davis">
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" value="zachary-davis@example.com">
-            </div>
-            
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" value="zacharydavis">
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" value="password123" placeholder="***********">
-            </div>
-            
-            <div class="form-group">
-                <label for="repeat-password">Repeat Password</label>
-                <input type="password" id="repeat-password" value="password123" placeholder="***********">
-            </div>
-            
-            <div class="checkbox-group">
-                <input type="checkbox" id="terms" checked>
-                <label for="terms">I agree to the Terms of User</label>
-            </div>
-            
-            <div class="buttons">
-                <button type="submit" class="signup-btn">Sign Up</button>
-                <a href="#" class="signin-link">Sign in →</a>
-            </div>
-        </form>
-    </div>
+
+<div class="form-container">
+    <form>
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="pakistan">Pakistan</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
