@@ -56,26 +56,27 @@
     }
 
     input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-       border-top: 0px;
-      border-left: 0px;
-      border-right: 0px;
-      border-bottom: 1px solid linear-gradient(to right, #d16ba5, #86a8e7);
-      width: 100%;
-      padding: 12px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background: transparent;
-    }
-     input:hover {
-      color: #b3708f ;
-      }
-      input:focus {
-        border-bottom: 2px solid linear-gradient (to right, #d16ba5, #86a8e7);
-      outline: none;
-    }
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+  border-bottom: 2px solid #d16ba5;
+}
+
+input:focus {
+  border-bottom: 2px solid #86a8e7;
+  outline: none;
+}
 
     .checkbox {
       margin-top: 20px;
