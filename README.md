@@ -33,9 +33,14 @@
     .right {
       flex: 1;
       padding: 60px;
+       background: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+      .form-container {
+      max-width: 400px;
+      margin: auto;
     }
 
     h2 {
@@ -44,6 +49,8 @@
     }
 
     label {
+       color: darkgrey;
+        display: block;
       margin-top: 15px;
       font-weight: bold;
     }
@@ -51,11 +58,23 @@
     input[type="text"],
     input[type="email"],
     input[type="password"] {
+       border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-bottom: 1px solid linear-gradient(to right, #d16ba5, #86a8e7);
       width: 100%;
       padding: 12px;
       margin-top: 5px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      background: transparent;
+    }
+     input:hover {
+      color: #b3708f ;
+      }
+      input:focus {
+        border-bottom: 2px solid linear-gradient (to right, #d16ba5, #86a8e7);
+      outline: none;
     }
 
     .checkbox {
@@ -66,6 +85,7 @@
 
     .checkbox input {
       margin-right: 10px;
+      accent-color: #b3708f;
     }
 
     .buttons {
@@ -81,7 +101,9 @@
       cursor: pointer;
       font-size: 16px;
     }
-
+      .buttons .button:hover {
+    color: #572a45;
+    }
     .signin-link {
       margin-top: 15px;
     }
@@ -95,37 +117,37 @@
 <body>
   <div class="left">
     <!-- Image side -->
-    <img src="https://via.placeholder.com/300x500.png?text=User+Image" alt="User">
+    <img src="IMG_0563.jpeg" alt="User">
   </div>
   <div class="right">
     <h2>Sign Up</h2>
     <form>
       <label>Full Name</label>
-      <input type="text" placeholder="Zachary Davis" required>
+      <input type="text" placeholder="Haji Bhola" required>
 
       <label>Email</label>
-      <input type="email" placeholder="zachary-davis@example.com" required>
+      <input type="email" placeholder="Haji-Bhola@example.com" required>
 
       <label>Username</label>
-      <input type="text" placeholder="zacharydavis" required>
+      <input type="text" placeholder="hajibhola" required>
 
       <label>Password</label>
-      <input type="password" required>
+      <input type="password" placeholder="**********" required>
 
       <label>Repeat Password</label>
-      <input type="password" required>
+      <input type="password" placeholder="**********" required>
 
       <div class="checkbox">
         <input type="checkbox" required>
         <span>I agree to the <a href="#">Terms of User</a></span>
       </div>
 
-      <div class="buttons">
-        <button type="submit">Sign Up</button>
-      </div>
+       <div class="buttons">
+    <a href="signup.html" class="button">Sign Up</a>
+    </div>
 
       <div class="signin-link">
-        Already have an account? <a href="#">Sign in →</a>
+        Already have an account? <a href="signin.html">Sign in →</a>
       </div>
     </form>
   </div>
