@@ -88,22 +88,22 @@
       accent-color: #b3708f;
     }
 
-    .buttons {
-      margin-top: 20px;
-    }
-
-    .buttons button {
-      background: linear-gradient(to right, #d16ba5, #86a8e7);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-      .buttons .button:hover {
-    color: #572a45;
-    }
+  .button {
+  background: linear-gradient(to right, #d16ba5, #86a8e7);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.button:hover {
+  color: #572a45;
+}
     .signin-link {
       margin-top: 15px;
     }
